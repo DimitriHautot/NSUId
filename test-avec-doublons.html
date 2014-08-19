@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Page avec doublons</title>
+<script>
+window.onload = function ()
+{
+var elems = document.querySelectorAll("[id]");
+var map = {};
+for (var i=0; i<elems.length; i++) {
+var id = elems[ i ].getAttribute('id');
+if (map[ id]) {
+//	alert("L'id " + id + " est présent plus d'une fois dans la page");
+	document.getElementById("log").innerHTML = "L'id <i>" + id + "</i> est présent plus d'une fois dans la page <br>";
+}
+map[ id]=true;
+}}
+</script>
+</head>
+
+<body>
+<div id="un">Un sandwich</div>
+<div id="deux">Deux sandwiches</div>
+<div id="trois">et caetera</div>
+<div id="un"></div>
+<div id="quatre"></div>
+<div id="cinq"></div>
+<div id="six"></div>
+<div id="un"></div>
+<div id="log"></div>
+</body>
+</html>

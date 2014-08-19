@@ -1,0 +1,33 @@
+body {
+	color: black;
+	background-color: white;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 25% 25%;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+table {
+ border-collapse: collapse;
+ width:90%;
+ }
+th, td {
+ border:1px solid black;
+ width:20%;
+ padding:5px;
+ }
+td {
+ text-align: center;
+ }
+td.xpath {
+ text-align: left;
+ }
+caption {
+ font-weight:bold
+ }
+.hidden {
+	display: none;
+}
+.shown {
+	display: inline-block;
+	white-space: nowrap;
+}

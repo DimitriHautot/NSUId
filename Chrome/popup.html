@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>NSUId report</title>
+		<link type="text/css" rel="stylesheet" href="css/popup.css" media="all" />
+		<script type="text/javascript" src="js/popup.js"></script>
+	</head>
+	<body>
+		<p id="lblLastCheckTime">
+			<i>Last check time: <span id="theDate"></span>.</i>
+		</p>
+		<p id="lblNoDuplicates" class="shown">
+			Great, no duplicate identifier in this page's DOM !
+		</p>
+		<p id="lblSomeDuplicates" class="hidden">
+			Sadly, there are <span id="count"></span> duplicate identifiers in this page's DOM.
+		</p>
+		<p id="lblOneDuplicate" class="hidden">
+			Sadly, there is 1 duplicate identifier in this page's DOM.
+		</p>
+		<table id="theTable" class="hidden">
+			<thead>
+			<tr>
+				<th>ID</th>
+				<th>Count</th>
+				<th>Tag</th>
+				<th>XPath</th>
+			</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</body>
+</html>

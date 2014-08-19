@@ -1,0 +1,33 @@
+{
+  "name" : "NSUId",
+  "description": "Not So Unique Id - detects the DOM elements whose IDs are not unique",
+  "version" : "0.5",
+  "background" : {
+    "scripts": ["js/background.js"],
+    "persistent" : false
+  },
+  "browser_action" :
+  {
+    "default_title" : "Are there not so unique ID's on this page?",
+    "default_popup" : "popup.html",
+    "default_icon": {
+    	"19": "images/Light_Bulb_clip_art_hight_19.png",
+    	"38": "images/Light_Bulb_clip_art_hight_38.png"
+    	}
+  },
+
+  "content_scripts" : [
+    {
+      "matches" : ["*://*/*", "file:///*/*"],
+      "js" : ["js/contentscript.js"],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+    "16"  : "images/Light_Bulb_clip_art_hight_16.png",
+    "48"  : "images/Light_Bulb_clip_art_hight_48.png",
+    "128" : "images/Light_Bulb_clip_art_hight_128.png"
+  },
+  "manifest_version": 2
+}
